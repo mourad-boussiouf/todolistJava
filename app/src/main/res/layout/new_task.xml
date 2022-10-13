@@ -1,13 +1,14 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
+
     <EditText
         android:id="@+id/newTaskText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@null"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:hint="New Task"/>
+        android:hint="New Task"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
