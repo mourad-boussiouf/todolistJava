@@ -1,4 +1,8 @@
 package com.example.myapplication2.Adapter;
 
-public class ToDoAdapter {
+import androidx.recyclerview.widget.RecyclerView;
+
+public class ToDoAdapter extends RecyclerView.Adapter<ToDoAdapter.ViewHolder> {
+
+    private List<ToDoModel> todoList;
 }
