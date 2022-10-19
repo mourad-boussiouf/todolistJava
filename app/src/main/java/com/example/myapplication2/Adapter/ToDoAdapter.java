@@ -2,12 +2,15 @@ package com.example.myapplication2.Adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.CheckBox;
 
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myapplication2.MainActivity;
 import com.example.myapplication2.Model.ToDoModel;
+
+import java.util.List;
 
 public class ToDoAdapter extends RecyclerView.Adapter<ToDoAdapter.ViewHolder> {
 
@@ -17,6 +20,8 @@ public class ToDoAdapter extends RecyclerView.Adapter<ToDoAdapter.ViewHolder> {
     public ToDoAdapter(MainActivity activity) {
         this.activity = activity;
     }
+
+
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType){
         View itemView = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.task_layout, parent, false);
@@ -25,7 +30,10 @@ public class ToDoAdapter extends RecyclerView.Adapter<ToDoAdapter.ViewHolder> {
 
     public void onBindViewHolder(ViewHolder holder, int position){
         ToDoModel item = todoList.get(position);
+        holder.task.setText(item.getTask());
+        holder.task.setChecked(item.getStatus());
     }
+
     public static class ViewHolder extends RecyclerView.ViewHolder{
         CheckBox task;
 
