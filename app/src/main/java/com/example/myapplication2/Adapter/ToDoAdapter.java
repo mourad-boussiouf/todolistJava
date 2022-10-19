@@ -1,6 +1,7 @@
 package com.example.myapplication2.Adapter;
 
 import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.CheckBox;
 
 import androidx.recyclerview.widget.RecyclerView;
