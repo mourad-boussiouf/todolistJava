@@ -34,6 +34,10 @@ public class ToDoAdapter extends RecyclerView.Adapter<ToDoAdapter.ViewHolder> {
         holder.task.setChecked(item.getStatus());
     }
 
+    public int getItemCount(){
+        return todoList.size();
+    }
+
     private boolean toBoolean(int n){
         return n!=0;
     }
