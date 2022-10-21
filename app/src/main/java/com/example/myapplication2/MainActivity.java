@@ -6,9 +6,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
+import com.example.myapplication2.Adapter.ToDoAdapter;
+
 public class MainActivity extends AppCompatActivity {
 
     private RecyclerView tasksRecyclerView
+    private ToDoAdapter tasksAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
