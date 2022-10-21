@@ -7,11 +7,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 
 import com.example.myapplication2.Adapter.ToDoAdapter;
+import com.example.myapplication2.Model.ToDoModel;
 
 public class MainActivity extends AppCompatActivity {
 
     private RecyclerView tasksRecyclerView
     private ToDoAdapter tasksAdapter;
+
+    private List<ToDoModel>taskList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
