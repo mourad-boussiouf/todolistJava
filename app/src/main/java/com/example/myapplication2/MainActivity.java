@@ -9,12 +9,15 @@ import android.os.Bundle;
 import com.example.myapplication2.Adapter.ToDoAdapter;
 import com.example.myapplication2.Model.ToDoModel;
 
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
     private RecyclerView tasksRecyclerView
     private ToDoAdapter tasksAdapter;
 
-    private List<ToDoModel>taskList;
+    private List<ToDoModel> taskList;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,5 +28,6 @@ public class MainActivity extends AppCompatActivity {
         tasksRecyclerView = findViewById(R.id.tasksRecyclerView);
         tasksRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         tasksAdapter = new ToDoAdapter(this);
+        tasksRecyclerView.setAdapter(tasksAdapter);
     }
 }
