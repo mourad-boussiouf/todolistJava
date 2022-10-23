@@ -29,5 +29,7 @@ public class MainActivity extends AppCompatActivity {
         tasksRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         tasksAdapter = new ToDoAdapter(this);
         tasksRecyclerView.setAdapter(tasksAdapter);
+
+        ToDoModel task = new ToDoModel();
     }
 }
