@@ -32,5 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
         ToDoModel task = new ToDoModel();
         task.setTask("test d'ajouts de taches");
+        task.setStatus(0);
+        task.setId(1);
     }
 }
