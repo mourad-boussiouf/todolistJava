@@ -31,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
         tasksRecyclerView.setAdapter(tasksAdapter);
 
         ToDoModel task = new ToDoModel();
-        task.setTask("test d'ajouts de tâches.");
+        task.setTask("test d'ajouts de taches");
+        task.setStatus(0);
+        task.setId(1);
     }
 }
