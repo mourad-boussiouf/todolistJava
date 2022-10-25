@@ -39,5 +39,8 @@ public class MainActivity extends AppCompatActivity {
         taskList.add(task);
         taskList.add(task);
         taskList.add(task);
+        taskList.add(task);
+
+        tasksAdapter.setTasks(taskList);
     }
 }
