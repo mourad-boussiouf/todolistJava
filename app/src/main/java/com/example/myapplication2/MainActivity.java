@@ -34,5 +34,10 @@ public class MainActivity extends AppCompatActivity {
         task.setTask("test d'ajouts de taches");
         task.setStatus(0);
         task.setId(1);
+
+        taskList.add(task);
+        taskList.add(task);
+        taskList.add(task);
+        taskList.add(task);
     }
 }
