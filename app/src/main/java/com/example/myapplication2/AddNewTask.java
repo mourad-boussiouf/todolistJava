@@ -12,4 +12,8 @@ public class AddNewTask extends BottomSheetDialogFragment {
     private EditText newTaskText;
     private Button newTaskSaveButton;
     private DatabaseHandler db;
+
+    public static AddNewTask newInstance(){
+        return new AddNewTask();
+    }
 }
