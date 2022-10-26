@@ -14,7 +14,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    private RecyclerView tasksRecyclerView
+    private RecyclerView tasksRecyclerView;
     private ToDoAdapter tasksAdapter;
 
     private List<ToDoModel> taskList;
