@@ -1,5 +1,6 @@
 package com.example.myapplication2;
 
+import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -15,5 +16,10 @@ public class AddNewTask extends BottomSheetDialogFragment {
 
     public static AddNewTask newInstance(){
         return new AddNewTask();
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState){
+        super.onCreate(savedInstanceState);
     }
 }
