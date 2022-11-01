@@ -1,6 +1,10 @@
 package com.example.myapplication2;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -23,4 +27,11 @@ public class AddNewTask extends BottomSheetDialogFragment {
         super.onCreate(savedInstanceState);
         setStyle(STYLE_NORMAL, R.style.DialogStyle);
     }
+
+    @Override
+    public void onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
+      View view = inflater.inflate(R.layout.new_task, container, false);
+      getDialog().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
+    }
+
 }
