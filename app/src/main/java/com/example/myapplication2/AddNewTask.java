@@ -38,6 +38,8 @@ public class AddNewTask extends BottomSheetDialogFragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState){
         super.onViewCreated();
+        newTaskText = getView().findViewById((R.id.newTaskText);
+        newTaskSaveButton = getView().findViewById(R.id.newTaskButton);
     }
 
 }
