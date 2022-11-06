@@ -40,6 +40,11 @@ public class AddNewTask extends BottomSheetDialogFragment {
         super.onViewCreated();
         newTaskText = getView().findViewById((R.id.newTaskText);
         newTaskSaveButton = getView().findViewById(R.id.newTaskButton);
+
+        db = new DatabaseHandler(getActivity());
+        db.openDatabase();
+
+        boolean isUpdate = false;
     }
 
 }
