@@ -8,6 +8,8 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 
+import androidx.core.content.ContextCompat;
+
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
 public class AddNewTask extends BottomSheetDialogFragment {
@@ -51,7 +53,9 @@ public class AddNewTask extends BottomSheetDialogFragment {
             String task = bundle.getString("task");
             newTaskText.setText((task);
             if(task.length()>0)
+                newTaskSaveButton.setTextColor(ContextCompat.getColor(getContext(),R.color.colorPrimaryDark));
         }
+
     }
 
 }
