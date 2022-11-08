@@ -46,6 +46,12 @@ public class AddNewTask extends BottomSheetDialogFragment {
 
         boolean isUpdate = false;
         final Bundle bundle = getArguments();
+        if(bundle != null){
+            isUpdate = true;
+            String task = bundle.getString("task");
+            newTaskText.setText((task);
+            if(task.length()>0)
+        }
     }
 
 }
