@@ -19,4 +19,11 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     private DatabaseHandler(Context context){
         super(context, NAME,null, VERSION);
     }
+
+    @Override
+    public void onCreate(SQLiteDatabase db){
+        db.execSQL(CREATE_TODO_TABLE);
+    }
+
+
 }
