@@ -25,5 +25,10 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         db.execSQL(CREATE_TODO_TABLE);
     }
 
+    @Override
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion){
+        db.execSQL("DROP TABLE IF EXISTS" + TODO_TABLE);
+        onCreate(db);
+    }
 
 }
