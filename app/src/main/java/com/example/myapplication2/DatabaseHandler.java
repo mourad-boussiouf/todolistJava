@@ -1,4 +1,7 @@
 package com.example.myapplication2;
 
-public class DatabaseHandler {
+import android.database.sqlite.SQLiteOpenHelper;
+
+public class DatabaseHandler extends SQLiteOpenHelper {
+
 }
