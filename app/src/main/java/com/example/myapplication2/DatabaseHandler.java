@@ -1,8 +1,11 @@
 package com.example.myapplication2;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+
+import com.example.myapplication2.Model.ToDoModel;
 
 public class DatabaseHandler extends SQLiteOpenHelper {
 
@@ -30,5 +33,11 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS" + TODO_TABLE);
         onCreate(db);
     }
+    public void OpenDatabase(){
+        db =  this.getWritableDatabase();
+    }
 
+    public void inertTask(ToDoModel task){
+        ContentValues cv = new ContentValues();
+    }
 }
