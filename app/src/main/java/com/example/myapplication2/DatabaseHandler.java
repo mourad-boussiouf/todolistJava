@@ -2,10 +2,14 @@ package com.example.myapplication2;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import com.example.myapplication2.Model.ToDoModel;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class DatabaseHandler extends SQLiteOpenHelper {
 
@@ -42,5 +46,29 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         cv.put(TASK, task.getTask());
         cv.put(STATUS, 0);
         db.insert(TODO_TABLE, null, cv);
+    }
+
+    public List<ToDoModel> getAllTasks(){
+        List<ToDoModel> taskList = new ArrayList<>();
+        Cursor cur = null;
+        db.beginTransaction();
+            try{
+                cur = db.query(TODO_TABLE, null, null, null, null, null, null);
+                if(cur != null){
+                    if(cur.moveToFirst()){
+                        do{
+                            ToDoModel task = new ToDoModel();
+                            task.setId(cur.getInt(cur.getColumnIndex(ID)));
+                            task.setTask(cur.getString(cur.getColumnIndex(TASK)));
+                            task.setStatus(cur.getInt(cur.getColumnIndex(STATUS)));
+                            taskList.add(task);
+                        }while(cur.moveToNext());
+                    }
+                }
+            }
+            finally {
+                db.endTransaction();
+                cur.close();
+            }
     }
 }
