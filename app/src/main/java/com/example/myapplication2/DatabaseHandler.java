@@ -70,5 +70,9 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 db.endTransaction();
                 cur.close();
             }
+            return taskList;
+    }
+    public void updateStatus(int id, int status){
+
     }
 }
