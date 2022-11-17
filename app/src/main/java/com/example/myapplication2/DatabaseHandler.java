@@ -23,7 +23,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                                     + TASK + "TEXT," + STATUS + "INTEGER)";
     private SQLiteDatabase db;
 
-    private DatabaseHandler(Context context){
+    public DatabaseHandler(Context context){
         super(context, NAME,null, VERSION);
     }
 
@@ -74,5 +74,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     }
     public void updateStatus(int id, int status){
         ContentValues cv = new ContentValues();
+        cv.put(TASK, task.getTask());
+        cv.put(STATUS, 0);
     }
 }
