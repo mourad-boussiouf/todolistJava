@@ -74,8 +74,9 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     }
     public void updateStatus(int id, int status){
         ContentValues cv = new ContentValues();
-        cv.put(TASK, task.getTask());
-        cv.put(STATUS, 0);
-        db.insert(TODO_TABLE, null, cv):
+        cv.put(STATUS, status);
+        db.update(TODO_TABLE,cv, ID+"=?", new String[]{String.valueOf(id)});
     }
+
+
 }
