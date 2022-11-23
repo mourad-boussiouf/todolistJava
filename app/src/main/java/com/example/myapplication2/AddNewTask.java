@@ -1,5 +1,6 @@
 package com.example.myapplication2;
 
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Editable;
@@ -12,8 +13,6 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.core.content.ContextCompat;
-
-import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
 public class AddNewTask extends BottomSheetDialogFragment {
 
@@ -34,7 +33,7 @@ public class AddNewTask extends BottomSheetDialogFragment {
     }
 
     @Override
-    public void onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
       View view = inflater.inflate(R.layout.new_task, container, false);
       getDialog().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
       return view;
@@ -47,7 +46,7 @@ public class AddNewTask extends BottomSheetDialogFragment {
         newTaskSaveButton = getView().findViewById(R.id.newTaskButton);
 
         db = new DatabaseHandler(getActivity());
-        db.openDatabase();
+        db.OpenDatabase();
 
         boolean isUpdate = false;
         final Bundle bundle = getArguments();
