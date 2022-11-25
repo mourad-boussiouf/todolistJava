@@ -77,8 +77,14 @@ public class AddNewTask extends BottomSheetDialogFragment {
 
             @Override
             public void afterTextChanged(Editable s) {
-
             }
         });
+
+         newTaskSaveButton.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View view) {
+
+             }
+         });
     }
 }
