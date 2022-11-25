@@ -1,5 +1,6 @@
 package com.example.myapplication2;
 
+import com.example.myapplication2.Model.ToDoModel;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -80,10 +81,19 @@ public class AddNewTask extends BottomSheetDialogFragment {
             }
         });
 
-         newTaskSaveButton.setOnClickListener(new View.OnClickListener() {
+        boolean finalIsUpdate = isUpdate;
+        newTaskSaveButton.setOnClickListener(new View.OnClickListener() {
              @Override
-             public void onClick(View view) {
-
+             public void onClick(View v) {
+                String text = newTaskText.getText().toString();
+                if(finalIsUpdate){
+                    db.updateTask(bundle.getInt("id"), text);
+                }
+                else{
+                    ToDoModel task = new ToDoModel();
+                    task.setTask(text);
+                    task.setStatus(0);
+                }
              }
          });
     }
