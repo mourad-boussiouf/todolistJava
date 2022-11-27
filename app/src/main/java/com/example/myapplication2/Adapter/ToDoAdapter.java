@@ -7,6 +7,7 @@ import android.widget.CheckBox;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.myapplication2.DatabaseHandler;
 import com.example.myapplication2.MainActivity;
 import com.example.myapplication2.Model.ToDoModel;
 import com.example.myapplication2.R;
@@ -17,6 +18,7 @@ public class ToDoAdapter extends RecyclerView.Adapter<ToDoAdapter.ViewHolder> {
 
     private List<ToDoModel> todoList;
     private MainActivity activity;
+    private DatabaseHandler db;
 
     public ToDoAdapter(MainActivity activity) {
         this.activity = activity;
