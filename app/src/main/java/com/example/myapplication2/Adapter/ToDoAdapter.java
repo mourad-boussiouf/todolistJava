@@ -21,6 +21,7 @@ public class ToDoAdapter extends RecyclerView.Adapter<ToDoAdapter.ViewHolder> {
     private DatabaseHandler db;
 
     public ToDoAdapter(MainActivity activity) {
+        this.db = db;
         this.activity = activity;
     }
 
