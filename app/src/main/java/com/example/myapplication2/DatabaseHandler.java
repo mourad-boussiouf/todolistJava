@@ -37,7 +37,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS" + TODO_TABLE);
         onCreate(db);
     }
-    public void OpenDatabase(){
+    public void openDatabase(){
         db =  this.getWritableDatabase();
     }
 

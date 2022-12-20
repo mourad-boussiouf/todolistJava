@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity implements DialogCloseListen
         getSupportActionBar().hide();
 
         db = new DatabaseHandler(this);
-        db.OpenDatabase();
+        db.openDatabase();
 
         taskList = new ArrayList<>();
 

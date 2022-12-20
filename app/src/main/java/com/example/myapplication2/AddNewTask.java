@@ -50,7 +50,7 @@ public class AddNewTask extends BottomSheetDialogFragment {
         newTaskSaveButton = getView().findViewById(R.id.newTaskButton);
 
         db = new DatabaseHandler(getActivity());
-        db.OpenDatabase();
+        db.openDatabase();
 
         boolean isUpdate = false;
         final Bundle bundle = getArguments();
