@@ -20,11 +20,10 @@ public class ToDoAdapter extends RecyclerView.Adapter<ToDoAdapter.ViewHolder> {
     private MainActivity activity;
     private DatabaseHandler db;
 
-    public ToDoAdapter(MainActivity activity) {
+    public ToDoAdapter(DatabaseHandler db,MainActivity activity) {
         this.db = db;
         this.activity = activity;
     }
-
 
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType){
         View itemView = LayoutInflater.from(parent.getContext())
